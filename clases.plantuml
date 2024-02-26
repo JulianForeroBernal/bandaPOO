@@ -1,0 +1,7 @@
+@startuml ()
+instrumento <|-- guitarra
+instrumento <|-- saxofon
+instrumento <|-- tiple
+musico *|-- instrumento
+
+@enduml 
