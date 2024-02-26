@@ -1,7 +1,19 @@
 @startuml ()
-instrumento <|-- guitarra
-instrumento <|-- saxofon
-instrumento <|-- tiple
-musico *|-- instrumento
+Instrumento <|-- guitarra
+Instrumento <|-- saxofon
+Instrumento <|-- tiple
+Instrumento : afinar()
+Instrumento : tocar()
+
+Musico *-- Instrumento
+Musico : instrumentos
+Musico : afinar_Instrumento()
+Musico : tocar_Instrumento()
+
+Banda *--Musico
+Banda : musicos
+Banda : afinar ()
+Banda : tocar ()
+Banda : armar_banda ()
 
 @enduml 
